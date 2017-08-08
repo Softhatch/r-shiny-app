@@ -3,7 +3,7 @@ library(RMySQL)
 
 # Connect to my-db as defined in ~/.my.cnf
 initConn <- function(){
-  dbConnect(MySQL(), user="root", password="n0va", 
+  dbConnect(MySQL(), user="root", password="", 
     dbname="tech_cities", host="localhost", client.flag=CLIENT_MULTI_STATEMENTS)
 }
 
