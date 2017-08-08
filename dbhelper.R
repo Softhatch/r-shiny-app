@@ -1,8 +1,10 @@
 library(DBI)
 library(RMySQL)
 
+# Connect to my-db as defined in ~/.my.cnf
 initConn <- function(){
-  dbConnect(MySQL())
+  dbConnect(MySQL(), user="root", password="n0va", 
+    dbname="tech_cities", host="localhost", client.flag=CLIENT_MULTI_STATEMENTS)
 }
 
 getDataBySkill <- function(skill){

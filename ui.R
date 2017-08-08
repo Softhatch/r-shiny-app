@@ -1,5 +1,4 @@
 library(leaflet)
-library(ShinyDash)
 
 cities <- c( 
   "Los Angeles, CA", 
@@ -17,6 +16,7 @@ cities <- c(
   "Boston, MA",
   "Austin, TX"
 )
+
 skills <- c(
   "Java",
   "Ruby",
@@ -38,7 +38,7 @@ shinyUI(
                        
                        #add leafletmap
                        leafletMap("map", width = "100%", height = 400,
-                                  initialTileLayer = "//{s}.tiles.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q",
+                                  initialTileLayer = "//{s}.tiles.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoic29mdGhhdGNoIiwiYSI6ImNqNjM3dGVzNjFkc3QzMm4wOG9obTkxdmcifQ.CKVTb3xRlg07SogfbSnhgA",
                                   initialTileLayerAttribution = HTML('Maps by <a href="http://www.mapbox.com/">Mapbox</a>'),
                                   options=list(
                                     center = c(37.45, -93.85),
